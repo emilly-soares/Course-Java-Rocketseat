@@ -8,13 +8,15 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/tasks")
+
 public class TaskController {
 
     @Autowired
     private ITaskRepository taskRepository;
 
     @PostMapping("/")
-    public TaskModel create(@RequestBody TaskModel taskModel)
-    var  task = this.taskRepository.save(taskModel);
-    return task;
+    public TaskModel create(@RequestBody TaskModel taskModel) {
+        var task = this.taskRepository.save(taskModel);
+        return task;
+    }
 }
