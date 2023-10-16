@@ -16,7 +16,7 @@ public class FilterTaskAuth extends OncePerRequestFilter {
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
             throws ServletException, IOException {
-        throw new UnsupportedOperationException("Unimplemented method 'doFilterInternal'");
+        filterChain.doFilter(request, response);
     }
 
 }
